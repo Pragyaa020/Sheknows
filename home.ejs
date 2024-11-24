@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+   
+    background-color: #ffe4ec;
+    position:fixed;
+    top:0;
+    border-style:solid;
+    border-width: 0px 0px 2px 0px;
+    border-color:#ef2a79;
+    z-index:100;
+    width:100vw;
+    
+
+}
+.navbar ul{
+    display:flex;
+    list-style: none;
+    margin:20px 30px;
+}
+
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight:bold;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:rgb(143, 139, 139);
+    padding: 30px 20px;
+    transition: all .5s ease;
+    text-align:center;
+
+
+}
+
+.navbar ul li a:hover{
+   
+    color:black;
+    
+    
+}
+
+.logo{
+    display:flex;
+    height:50px;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-bottom:5px;
+    width: 12%;
+}
+
+/*Home section*/
+#home{
+    display:flex;
+    flex-direction: column;
+    
+    height: 840px;
+    justify-content:center;
+    align-items: center;
+    color:rgb(60, 58, 58);
+    z-index:-1;
+
+}
+
+#home::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background: #a8401a; */
+    background: url('https://i.ibb.co/Jzmq6KY/3816436.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    width:100%;
+    margin-bottom: 0;
+    opacity:.5;
+} 
+
+.main{
+    display: flex;
+    flex-direction:column;
+    /* border:1px solid white; */
+    align-items: center;
+    /* position: absolute;
+    top: 35%;
+   
+    left: 5%; */
+    justify-content:center;
+    font-size: 20px;
+    z-index:10;
+ 
+    
+
+
+}
+
+.logo{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:1.5vh;
+    color:#f74780;
+
+}
+
+
+
+
+
+.headings{
+    font-family: century;
+    font-size: 200%;
+    text-align: center;
+    margin: 40px 0px;
+    color:#ef2a79;
+    font-weight:bolder;
+
+}
+
+.buttons{
+
+    margin:30px ;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.btn{
+    padding: 10px 35px;
+    background-color:#ffc1d5;
+    border: 1px solid white;
+    color: #ef2a79;
+    outline: none;
+    transition : .6s ease;
+    border-radius:50px;
+    height:60px;
+    width:170px;
+    margin:0px 100px;
+    border-color:pink;
+    border-style:solid;
+    box-shadow: 5px 5px 5px rgb(143, 139, 139);
+
+
+
+    margin:20px;
+    
+
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow:0 0 5px white,0 0 10px white,0 0 15px white;
+
+}
+body{
+    overflow-x: hidden;
+}
+/*.image-box{
+     display:flex;
+    position:relative;
+    width:100%;
+    height:auto;
+    max-width:800px;
+    margin:0 auto;
+    z-index:5;
+    
+
+}
+
+.image{
+    position:absolute;
+    top: 0px;
+    right:0px;
+    height:600px;
+    left:95%;
+    transform:translate(-50%,-50%);
+    max-width:100%;
+
+
+} */
+
+/*services section*/
+#services{
+    display :flex;
+    /* flex-direction :column; */
+    /* padding :20px; */
+   margin: 0%;
+    position:relative;
+    top:-10vw;
+    left: 0%;
+    z-index:6;
+   width: 100vw;
+    
+    
+   
+}
+
+.row{
+    margin-right: 5vw;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing:border-box;
+    width: 100vw;
+    left: 0%;
+   
+}
+
+.boxpr{
+    margin: 2vw;
+    display:flex;
+    justify-content: center;
+    width:20vw;
+    height:20vw;
+    border:5px #ef2a79;
+    
+   align-items: center;
+    text-align:center;
+    
+    padding: 2vh 2vh;
+
+    border-radius:15px;
+    background:linear-gradient(to top,#ffc1d5 50%, #ffe4ec 50%);
+    background-size:100% 200%;
+    transition:all .8s;
+    box-shadow: 5px 5px 5px rgb(143, 139, 139);
+    
+    
+    
+}
+
+.boxtext{
+    font-family:verdana;
+    color:#ef2a79
+  
+}
+
+.boxpr:hover{
+    background-position:left bottom;
+    color:white;
+    border:none;
+    box-shadow:0 0 20px rgb(255,45,45);
+}
+
+.box img{
+    height: 25vh;
+    background-color:white;
+    padding:10px;
+}
+
+@media screen and (max-width:768px){
+    img{
+        width:100%;
+        
+    }
+
+    .navbar{
+        display:flex
+    }
+}
+
+#home{
+    height:820px;
+}
+.headings{
+    font-size:200%;
+}
+.image{
+    width:300px;
+    height:175px;
+}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+        body {
+            /* margin: 4vh; */
+        }
+        .container9 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar {
+            width: 25%;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 15px;
+            height: 92vh;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .fa-circle {
+            color: rgb(225, 106, 126);
+        }
+        .searchBar {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .glass:hover {
+            color: rgb(227, 106, 126);
+            cursor: pointer;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa-brands {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #ee4b7f;
+            cursor: pointer;
+        }
+        .fa-brands:hover {
+            color: rgb(232, 111, 131);
+        }
+        .data {
+            width: 73%;
+            border-radius: 3px;
+            height: 92vh;
+            overflow-y: auto;
+            /* position: fixed; */
+        }
+        .top {
+            height: 60px;
+            border-radius: 3px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .header {
+            height: 8vh;
+            border-radius: 3px;
+            background-color:#fc6998;
+            margin: 3vh 0px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header p {
+            font-size: 3vh;
+            /* font-weight: bold; */
+            color: white;
+        }
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+        }
+        .boxsuman{
+            margin: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 1px solid #333; */
+            /* border-radius: 5px; */
+            padding: 10px;
+        }
+        .img-box {
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images {
+            max-height: 90%;
+            max-width: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 30px;
+        }
+        .quali{
+            padding: 10px ;
+        }
+        .location{
+            padding: 0px;
+        }
+        .name1{
+            padding: 0px;
+        }
+        h2 {
+            font-size: 20px;
+            color: rgb(227, 120, 138);
+        }
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(237, 76, 103);
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover {
+            background-color: rgb(227, 108, 128);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+ul{
+    list-style:none;
+}
+.footer{
+    background-color: #ee4b7f;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px ;
+    background-color: white;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transform: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: color #ffc4d6; 
+}
+.container3{
+    /* background-color: #4e5663; */
+    background-color: #ffc1d5;
+
+    display: flex;
+    justify-content:  space-between;
+    width: 85%;
+    margin: 40px auto;
+    /* background-color: #404b56; */
+    /* background-color:  #ffc1d5; */
+    border-radius: 10px;
+    padding: 40px 40px;
+}
+.left-column{
+    width: 45%;
+    padding: 10px;
+}
+.right-column{
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.contact{
+    color: #fff;
+}
+.contact h2{
+    font-size: 32px;
+    margin-top: 10px;
+
+}
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label{
+    display: block;
+    margin-top: 15px;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e3d9bf;
+    outline-color: #e3d9bf;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+textarea{
+    height: 100px;
+}
+button{
+    width: 125px;
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(218, 101, 121);
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.content
+{
+    text-align: center;
+    padding: 25px;
+}
+.content h1{
+    font-size: 32px;
+    color: rgb(228, 95, 117);
+}
+.content h1{
+    font-size: 32px;
+    color: rgb(240, 118, 138);
+}
+.content p{
+    margin: 8px 0px;
+    font-size: 18px;
+    line-height: 1.5
+    ;
+}
+.content h2{
+    margin-top: 20px;
+}
+@media screen and(max-width:768px){
+    .container3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-column{
+        width: 85%;
+    }
+    .right-column{
+        width: 85;
+        margin-top: 25px;
+    }
+}
+h3{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    color: #fc6998;
+    /* background-color: w; */
+}
+body{
+  background-color: #ffe2f1;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:"Arial", sans-serif;
+}
+ .hero{
+    background-color: #ffc1d5;
+    overflow: hidden;
+ }
+ .heading h1{
+    color: #f74780;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+
+ }
+ .container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+    padding-bottom: 3%;
+ }
+  .hero-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+  }
+  .hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .hero-content p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+    
+  }
+  /* .hero-content button{
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s, ease;
+
+  } */
+  /* .hero-content button:hover{
+    background: color  #ff6347;
+    transform: scale(1.1);
+  } */
+  .hero-image{
+    flex: 1;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+  }
+  img{
+    width: 100%;
+    height: 440px;
+    width: 600px;
+    border-radius: 20px;
+    padding: auto;
+
+    /* overflow: hidden; */
+  }
+  @media screen and (max-width:768px){
+    .heading h1{
+        font-size: 200%;
+        margin-top: 30px;
+        font-family: century;
+    }
+    .hero{
+        margin: 0px;
+    }
+    .container1{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+    .hero-content{
+        width: 100%;
+        margin: 35px 0px ;
+    }
+    .hero-content h2{
+        font-size: 150%;
+    }
+    .hero-content p{
+        font-size: 80%;
+        margin-bottom: 20px;
+    }
+    /* .hero-content button{
+        font-size: 16px;
+        padding: 8px 16 px ;
+    } */
+    .hero-image{
+        width: 100%;
+        /* position: relative; */
+    }
+    img{
+      width: 100%;
+    }
+  }
+  @keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  @keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+#spacer1{
+   
+    width: 100vw;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+h1{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container2{
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    grid-gap: 25px;
+    
+    /* background-color:  #ffc1d5; */
+}
+.cards{
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 0px;
+    border-radius: 10px;
+    
+}
+.image-section{
+    height: 225px;
+    background-color: paleturquoise;
+}
+.cards .img-one{
+    background-image: url('https://i.ibb.co/643VwkQ/prableen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border: 10px; */
+}
+.cards .img-two{
+    background-image: url('https://i.ibb.co/KbBbxnC/jaisman.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img-three{
+    background-image: url('https://i.ibb.co/QKmgJVr/team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cards .img-four{
+    background-image: url('https://i.ibb.co/5rQ0Nb5/pragya.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container2{
+    padding: 20px 10px;
+    text-align: center;
+}
+.content h2{
+    letter-spacing: 1px;
+}
+.team{
+    margin-top :30px;
+    /* background-color: pink; */
+    text-align: center;
+    background-color: #ffc1d5;
+}
+
+.diseases{
+        background-color: #ffc1d5;
+        border: 2px solid #ffe4ec;
+        align-items: center;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+    
+
+    .diseases h1{
+        text-align: center;
+        
+    }
+
+    #line{
+        background-color: #fc6998;
+        margin: 0 auto;
+        width: 7vh;
+        height: 0.5vh;
+        
+    }
+
+    #dinfo{
+       
+        text-align: center;
+        margin-top: 2vh;
+    }
+
+    #d{
+      
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 4;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+
+    }
+    .element{
+        border-radius: 0.5rem;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        width:45vh;
+        height: 40vh;
+       
+        background-color: #ffe4ec;
+        margin-top: 3vh;
+    }
+   
+    #d1{
+       
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #d1{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    #d1{
+        grid-row: 1;
+        grid-column: 3;
+    }
+    #d1{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #d1{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #d1{
+        grid-row: 2;
+        grid-column: 3;
+    }
+    #d1{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    #d1{
+        grid-row: 3;
+        grid-column: 2;
+    }
+    #d1{
+        grid-row: 3;
+        grid-column: 3;
+    }
+    #d1{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    #d1{
+        grid-row: 4;
+        grid-column: 2;
+    }
+    #d1{
+        grid-row: 4;
+        grid-column: 3;
+    }
+    .headprab h2, H2{
+        
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        
+       
+    }
+    .tail{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        flex-direction: column;
+       
+        
+    }
+    .headprab{
+        background-image: url('https://i.ibb.co/xJ8Fvf2/backdrop.jpg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         border-radius: 0.5rem;
+        height: 30vh;
+    }
+
+    #spacer2{
+        margin: 0;
+        height: 10vh;
+        background-color: #ffc1d5;
+    }
+
+    #symptom-head{
+    font-size: 4vh;
+    color: #f74780;
+    text-align: center;
+    background-color: #ffc1d5;
+}
+body{
+    background-color: #ffe2f1;
+    /* overflow: hidden; */
+}
+/* form{
+    font-size: 2vh;
+    margin-left: 5vw;
+    display: grid;
+} */
+/* #minor{
+    grid-column: 1;
+    grid-column: 1;
+    border-right: 2px solid white;
+     padding-left: 7%; 
+}
+#major{
+    grid-row: 1;
+    grid-column: 2;
+} */
+input[type=checkbox]{
+    margin: 1vh;
+}
+input[type=submit]{
+    padding: 0.4%;
+   display: inline-block;
+    background-color: #fc6998;
+    color: white;
+    border-radius: 9px;
+    border: none;
+    font-size: larger;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.symptom-content{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 8vh;
+    padding: 2%;
+    font-size: 2.5vh;
+}
+.entire{
+    background-color: #ffc1d5;
+}
+.imagess{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 50%;
+}
+.symptoms{
+    position: fixed;
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+.symptom-container {
+    max-width: 600px; 
+    margin: 0 auto;
+  }
+  
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
+    font-size: 4vh;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .checkbox-grid {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .checkbox-grid {
+      grid-template-columns: auto; /* Change to single column layout */
+      overflow-y: scroll; /* Enable vertical scrolling */
+      max-height: 300px; /* Set maximum height to enable scrolling */
+    }
+  }
+  label{
+    display: inline;
+  }
+.checkbox{
+    /* font-weight: bold; */
+    font-size: 2.5vh;
+    margin-bottom: 2%;
+}
+input[type="checkbox"]{
+    transform: scale(2);
+}
+#result{
+    font-size: 3vh;
+    color: #f74780;
+    text-align: center;
+    background-color: #ffc1d5;
+    margin-bottom: 4vh;
+}
+.container10{
+    background-color: #ffc1d5;
+    padding-bottom: 2%;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <!-- <img class="logo" src="https://i.ibb.co/tPDP1pr/shehacks.jpg"alt="this is iamge" width="100px"> -->
+        <div class="logo">SheKnows</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#ourteam">Our team</a></li>
+            <% if(locals.user){ %>
+                <li><a href="/logout">Logout</a></li>
+                <% } else { %>
+            <li><a href="/signup">Register</a></li>
+            <% } %>
+            <li><a href="#contactus">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="main" >
+            <h2 class="headings">WELCOME TO SHEKNOWS</h2>
+            <P style="text-align:center">A website dedicated to the physical and mental health of women.</P>
+                <div class="buttons">
+                <a href="#tabs"><button class="btn">Get started</button></a>
+                <% if(locals.user){ %>
+                    <% } else { %>
+                <a href="#register"><button class="btn">Register</button></a>
+                <% } %>
+            </div>
+          
+        </div>
+
+        
+
+     </section>
+
+    <section id="services">
+        <div class="row">
+            <div class="boxpr">
+             <h2 class="boxtext"><a href="#entire" style="text-decoration: none;">Check Yourself</a></h2>
+                
+            </div>
+
+            <div class="boxpr">
+            <h2 class="boxtext"><a href="#data" style="text-decoration: none;">Get a Doctor</a></h2>
+                
+            </div>
+
+            <div class="boxpr">
+                <h2 class="boxtext"><a href="https://www.hexahealth.com/insurance/hospitals/ayushman-bharat" style="text-decoration: none;">Hospital suggestions</a></h2>             
+                </div>
+
+        </div>
+
+  
+    </section>
+<div id="spacer1"></div>
+  
+    
+   <section class="hero" id="aboutus">
+    <div class="heading">
+        <h1>About us</h1>
+        <div id="line"></div>
+    </div>
+    <div class="container1">
+        <div class="hero-content">
+            <h2>Welcome to our website</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos assumenda facilis libero laudantium! Cumque tempore asperiores eaque cum magnam explicabo quaerat. Ipsa corporis excepturi perspiciatis quos eos fugit harum?</p>
+            <!-- <div class="social">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+            </div> -->
+            <!-- <button class="cta-button">Learn More</button> -->
+        </div>
+
+        <div class="hero-image">
+            <img src="https://i.ibb.co/X82JPFJ/8.jpg">
+        </div>
+    </div>
+   </section>
+   <h3>
+    "Embrace Your Feminine Power: Where Care Meets Confidence." 
+</h3>
+   <div class="diseases"  >
+    <h1 style="text-align: center; font-size: 250%; color: #f74780;">Diseases</h1>
+    <div id="line"></div>
+    <div id="dinfo">"Listen to your body's whispers before it screams. Early detection is key."</div>
+    <div id="d">
+        <div class="element" id="d1">
+      
+           <div class="headprab">
+           
+            <h2>BREAST CANCER</h2>
+        </div>
+           <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+            <a href="/info">Read More....</a>
+           </div>
+        </div>
+        <div class="element" id="d2">
+            <div class="headprab"><H2>CERVICAL CANCER</H2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+      
+            </div>
+        </div>
+        <div class="element" id="d3">
+            <div class="headprab"><H2>OVARIAN CANCER</H2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+            
+            </div>
+        </div>
+        <div class="element" id="d4">
+            <div class="headprab"><H2>ENDOMETRIOSIS</H2></div>
+           <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+            <a href="">Read More....</a>
+
+           </div>
+        </div>
+        <div class="element" id="d5">
+            <div class="headprab"><H2>PCOS</H2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+      
+            </div>
+        </div>
+        <div class="element" id="d6">
+        <div class="headprab"><H2>OSTEOPOROSIS</H2></div>
+        <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+            <a href="">Read More....</a>
+
+        </div>
+        
+        </div>
+        <div class="element" id="d7">
+            <div class="headprab"><h2>GESTATIONAL DIABETES</h2></div>
+           <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+            <a href="">Read More....</a>
+   
+           </div>
+        </div>
+        <div class="element" id="d8">
+            <div class="headprab"><h2>UTI'S</h2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+            </div>
+       
+        </div>
+        <div class="element" id="d9">
+            <div class="headprab"><h2>PID</h2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+            </div>
+        
+        </div>
+        <div class="element" id="d10">
+            <div class="headprab"><h2>THYROID</h2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+         
+            </div>
+        </div>
+        <div class="element" id="d11">
+            <div class="headprab"><h2>ANAMEIA</h2></div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+            </div>
+            
+        </div>
+        <div class="element" id="d12">
+            <div class="headprab"><H2>PMS</H2> </div>
+            <div class="tail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptate.
+                <a href="">Read More....</a>
+            
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="entire" id="entire">
+    <h3 id="symptom-head">Are you feeling any of these??</h3>
+<form class="symptom-container" id="symptom-container">
+    <div class="checkbox">
+            
+                <input type="checkbox" value="Dimpling,Redness ,pitting or other changes in the skin" class="symptom">
+                <label for="cancer">Dimpling,Redness ,pitting or other changes in the skin </label>
+            <br>
+            
+                <input type="checkbox" value="Abnormal or bloody fluid from the nipple" class="symptom">
+                <label for="cancer">Abnormal or bloody fluid from the nipple</label>
+            <br>
+            
+                <input type="checkbox" value="Breast lump or thickening" class="symptom">
+                <label for="cancer">Breast lump or thickening </label>
+            <br>
+
+                <input type="checkbox" value="Absent periods" class="symptom">
+                <label for="pcos">Absent periods</label>
+            <br>
+            
+            <input type="checkbox" value="Male-pattern baldness" class="symptom"> 
+            <label for="pcos">Male-pattern baldness</label>
+        <br>
+        
+            <input type="checkbox" value="Hypertension" class="symptom">
+            <label for="pcos">Hypertension</label>
+        <br>
+        
+            <input type="checkbox" value="Weight gain, especially around belly" class="symptom">
+            <label for="pcos">Weight gain, especially around belly</label>
+        <br>
+        
+            <input type="checkbox" value="High cholestrol" class="symptom">
+            <label for="pcos">High cholestrol</label>
+        <br>
+        
+            <input type="checkbox" value="Headaches" class="symptom">
+            <label for="anaemia">Headaches</label>
+        <br>
+        
+            <input type="checkbox" value="Brittle Nails" class="symptom">
+            <label for="anaemia">Brittle Nails</label>
+        <br>
+        
+            <input type="checkbox" value="Irritability and loss of appetite" class="symptom">
+            <label for="anaemia">Irritability and loss of appetite</label>
+        <br>
+        
+            <input type="checkbox" value="Pale skin color" class="symptom">
+            <label for="anaemia">Pale skin color</label>
+        <br>
+        
+            <input type="checkbox" value="Hair loss" class="symptom">
+            <label for="thyroid">Hair loss</label>
+        <br>
+        
+            <input type="checkbox" value="Hand tremor" class="symptom">
+            <label for="thyroid">Hand tremor</label>
+        <br>
+            
+                <input type="checkbox" value="Nervousness and restlessness" class="symptom">
+                <label for="thyroid">Nervousness and restlessness</label>
+            <br>
+            
+                <input type="checkbox" value="Palpitations" class="symptom">
+                <label for="thyroid">Palpitations</label>
+            <br>
+            
+                <input type="checkbox" value="Fatigue" class="symptom">
+                <label for="auto"> Fatigue</label>
+            <br>
+            
+                <input type="checkbox" value="Swollen glands" class="symptom">
+                <label for="auto">Swollen glands</label>
+            <br>
+            
+                <input type="checkbox" value="Abdominal pain/digesive issues" class="symptom">
+                <label for="auto">Abdominal pain/digesive issues</label>
+            <br>
+           
+                <input type="checkbox" value="Painful periods" class="symptom">
+                <label for="pid">Painful periods</label>
+            <br>
+            
+                <input type="checkbox" value="Nausea and vomiting" class="symptom">
+                <label for="pid">Nausea and vomiting</label>
+            <br>
+            
+                <input type="checkbox" value="Change in smell of vaginal discharge" class="symptom">
+                <label for="pid">Change in smell of vaginal discharge</label>
+            <br>
+            
+                <input type="checkbox" value="Spotty skin and greasy hair" class="symptom">
+                <label for="pms">Spotty skin and greasy hair</label>
+            <br>
+            
+                <input type="checkbox" value="Mood swings" class="symptom">
+                <label for="pms">Mood swings</label>
+            <br>
+            
+                <input type="checkbox" value="Food cravings" class="symptom">
+                <label for="pms">Food cravings</label>
+            <br>
+            
+                <input type="checkbox" value="Increased thirst" class="symptom">
+                <label for="gestation">Increased thirst</label>
+            <br>
+            
+                <input type="checkbox" value="Dry mouth" class="symptom">
+                <label for="gestation">Dry mouth</label>
+            <br>
+            
+                <input type="checkbox" value="Genital itching" class="symptom">
+                <label for="gestation">Genital itching</label>
+            <br>
+            
+                <input type="checkbox" value="Blurred eyesight" class="symptom">
+                <label for="gestation">Blurred eyesight</label>
+            <br>
+    </div>
+    <div class="symptom-content">
+        <input type="submit" id="sub">
+    </div>
+</form>
+
+<div id="result" ></div>
+<!-- <div class="imagess">
+    <img src="https://i.ibb.co/G7dDW7C/bckgrnd.jpg" alt="error loading image" class="symptoms">
+</div> -->
+</div>
+
+   <div class="container9">
+    <div class="sidebar">
+        <div class="sidehead">
+            <div class="dots">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle" style="color: #333;"></i>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <hr style="margin: 15px 0; border: 1px solid #eee">
+        </div>
+        <div class="sidebody" style="height: 69vh;">
+            <div class="searchBar">
+                <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+                <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+            </div>
+        </div>
+        <div class="sidefoot">
+            <hr style="margin: 15px 0; border: 1px solid #eee">
+            <div class="social-icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-square-github"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="data" id="data">
+        <!-- <div class="top">
+            <p>+92318-5700008</p>
+            <p>mydoctor_fella@gmail.com</p>
+        </div> -->
+        <div class="header">
+            <p>MEET YOUR DOCTOR</p>
+        </div>
+        <div class="body">
+            <div id="root"></div>
+        </div>
+    </div>
+</div>
+
+<div class="spacer2">
+    <p></p>
+</div>
+
+   <!-- our-team -->
+   <div class="container10" id="ourteam">
+   <div class="team">
+    <h1 style="color: #f74780; font-size: 200%; padding-top: 3%;">Our Team</h1>
+    <div id="line"></div>
+   </div>
+   <div class="container2">
+    <div class="cards">
+        <div class="image-section img-one"></div>
+        <div class="content">
+            <h2>Prableen</h2>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="image-section img-two"></div>
+        <div class="content">
+            <h2>Jaisman</h2>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="image-section img-three"></div>
+        <div class="content">
+            <h2>Suman</h2>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="image-section img-four"></div>
+        <div class="content">
+            <h2>Pragya</h2>
+        </div>
+    </div>
+   </div>
+</div>
+   <!-- contact us -->
+   <div class="container3" id="contactus">
+    <div class="left-column">
+        <div class="contact">
+            <h2>Get in Touch</h2>
+            <form> <% if(locals.user){ %>
+                
+                <% } else { %>
+                    
+                <label for="name">Your name</label>
+                <input type="text" name="name" required>
+                <label for="email">Your email:</label>
+                <input type="email" name="email"required>
+                <% } %>
+                <label for="message">Message</label>
+                <textarea name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>For question or assistance , contact us anytime. We're here for your help!</p>
+            <h2>Contact Information</h2>
+            <p>Email:selfcare_123@gmail.com</p>
+            <p>Phone: (123) 456-3350</p>
+            <p>Address:123 Main Street,Prayagraj,Uttar Pradesh</p>
+        </div>
+    </div>
+   </div>
+   <!-- footer -->
+   <footer class="footer">
+    <div class="container4">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Affiliate Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Related Products</a></li>
+                    <li><a href="#">Hospital Recommendation</a></li>
+                    <li><a href="#">Awareness Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/SheHacks-IIITA/100069332172803/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shehacks.id/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FSheHacks"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.bing.com/search?q=she+hacks&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=she+hack&sc=11-8&sk=&cvid=BE58DA6392D04579AABAF05144C2217F&ghsh=0&ghacc=0&ghpl="><i class="fa-brands fa-google"></i></a>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+   </footer>
+
+</body>
+
+<!-- <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"> -->
+    <script>
+    const product = [
+    {
+        id: 0,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        title: 'Expertise: Gynaecologist',
+        name1:'Name: Dr.Pragya Srivastav',
+        quali:'Qualification: Gold Medalist , MBBS',
+        location:"Location: XYZ Hospital, Uttar Pradesh",
+        
+       
+        price: 1,
+    },
+    {
+        id: 1,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        
+        title: 'Expertise: Cardiologist',
+        name1:'Name: Dr.Mahima',
+        quali:'Qualification: Silver Medalist , MBBS ',
+        location:"Location: XYZ Hospital, Uttar Pradesh",
+        price: 60,
+    },
+    {
+        id: 2,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        title: 'Expertise:Obstetrician',
+        name1:'Name: Dr.Rabiya Khan',
+        quali:'Qualification: Gold Medalist , MBBS ,MD',
+        location:"Location: XYZ Hospital, Delhi",
+        price: 230,
+    },
+    {
+        id: 3,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        title: 'Expertise: Breast Care Specialist',
+        name1:'Name: Dr.Astuti Pandey',
+        quali:'Qualification:  MBBS',
+        location:"Location: XYZ Hospital, Mumbai",
+        price: 100,
+    },
+    {
+        id: 4,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        title: 'Expertise:Ophthalmologist',
+        name1:'Name: Dr.Pragya Srivastav',
+        quali:'Qualification: Pursuef UG degree in Uzbekistan, MBBS',
+        location:"Location: XYZ Hospital, Uttar Pradesh",
+        price: 230,
+    },
+    {
+        id: 5,
+        image: 'https://i.ibb.co/3YJKs8v/doc9.jpg',
+        title: 'Expertise: Dermatologist',
+        name1:'Name: Dr.Pragya Srivastav',
+        quali:'Qualification: Bronze Medal , MBBS ,MD',
+        location:"Location: XYZ Hospital, Uttar Pradesh",
+        price: 100,
+    },
+];
+
+const categories = [...new Set(product.map((item) => { return item }))]
+
+document.getElementById('searchBar').addEventListener('keyup', (e) => {
+    const searchData = e.target.value.toLowerCase();
+    const filteredData = categories.filter((item) => {
+        return (
+            item.title.toLowerCase().includes(searchData)
+        )
+    })
+    displayItem(filteredData)
+});
+
+const displayItem = (items) => {
+    document.getElementById('root').innerHTML = items.map((item) => {
+        var { image, title ,name1,quali,location} = item;
+        return (
+            `<div class='box'>
+                <div class='img-box'>
+                    <img class='images' src=${image}></img>
+                </div> 
+                <div class='bottom'>
+                    <p>${title}</p>
+               </div>
+                <div class='name1'>
+                    <p>${name1}</p>
+                </div>
+                <div class='quali'>
+                    <p>${quali}</p>
+                </div>
+                <div class='location'>
+                    <p>${location}</p>
+                </div>
+            </div>`
+        )
+    }).join('')
+};
+displayItem(categories);
+
+const form = document.querySelector('.symptom-container');
+    const checkboxes = document.querySelectorAll('.symptom');
+    const resultDiv = document.getElementById('result');
+    const btn = document.getElementById('sub');
+    btn.addEventListener('click', (event)=> {
+       
+        event.preventDefault(); 
+        const selectedSymptoms = [];
+    
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                selectedSymptoms.push(checkbox.value);
+            }
+        });
+    
+        displayDisease(selectedSymptoms);
+    });
+    
+
+    function displayDisease(symptoms) { 
+        const disease = [];
+         if(symptoms.includes("Dimpling,Redness ,pitting or other changes in the skin") || symptoms.includes("Abnormal or bloody fluid from the nipple") || symptoms.includes("Breast lump or thickening"))
+        disease.push("Breast cancer") ;
+
+        else if(symptoms.includes("Absent periods") || symptoms.includes("Male-pattern baldness") || symptoms.includes("Hypertension") || symptoms.includes("Weight gain, especially around belly") || symptoms.includes("High cholestrol"))
+        disease.push("PCOS(Polycystic ovary syndrome)");
+
+        else if(symptoms.includes("Headaches") || symptoms.includes("Brittle Nails") || symptoms.includes("Irritability and loss of appetite") || symptoms.includes("Pale skin color"))
+        disease.push("Anaemia");
+
+        else if(symptoms.includes("Hair loss") || symptoms.includes("Hand tremor") || symptoms.includes("Nervousness and restlessness") || symptoms.includes("Palpitations"))
+        disease.push("thyroid");
+
+        else if(symptoms.includes("Fatigue") || symptoms.includes("Swollen glands") || symptoms.includes("Abdominal pain/digesive issues"))
+        disease.push("Auto immune diseases");
+
+        else if(symptoms.includes("Painful periods") || symptoms.includes("Nausea and vomiting") || symptoms.includes("Change in smell of vaginal discharge"))
+        disease.push("Pelvic inflammatory disease");
+
+        else if(symptoms.includes("Spotty skin and greasy hair") || symptoms.includes("Mood swings") || symptoms.includes("Food cravings"))
+        disease.push("Pre-Menstrual Syndrome");
+
+        else if(symptoms.includes("Increased thirst") || symptoms.includes("Dry mouth") || symptoms.includes("Genital itching") || symptoms.includes("Blurred eyesight"))
+        disease.push("Gestational diabetes");
+        // resultDiv.innerHTML = Based on your symptoms, you might have ${disease.join(', ')}. Are you concerned?? Visit our concerned doctors or talk to our AI assistant here.;
+        resultDiv.innerHTML = `Based on your symptoms, you might have ${disease.join(', ')}. Are you concerned?? Visit our concerned doctors.`.replace(/\./g, ".<br>");
+
+    }
+
+
+</script>
+
+</html>

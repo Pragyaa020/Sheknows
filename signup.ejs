@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap') ;
+    body {
+        font-family: Exo+2;
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .background-Right {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #f74780;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+   
+    .background-Left {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #f74780;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    #background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -3;
+    }
+
+    
+    #slide {
+        width: 50%;
+        max-height: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-left: 50%;
+        position: absolute;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    
+    .top {
+        width: 200%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        left: -100%;
+    }
+
+    
+    .left {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        left: 0;
+        position: absolute;
+    }
+
+    
+    .right {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        right: 0;
+        position: absolute;
+    }
+
+   
+    .content {
+        width: 250px;
+        margin: 0 auto;
+        top: 30%;
+        position: absolute;
+        left: 50%;
+        margin-left: -125px;
+    }
+
+    .content h2 {
+
+        font-size: 35px;
+    }
+
+    button {
+        border-radius: 5px;
+        color: white;
+        width: auto;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select,option {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    .on-off {
+        background: none;
+
+        box-shadow: none;
+    }
+    .alert{
+        height:10vh;
+        width: 100vw;
+
+    }
+</style>
+
+<body>
+    <div id="background">
+        <div class="background-Right"></div>
+        <div class="background-Left"></div>
+    </div>
+
+    <div id="slide">
+        <div class="top">
+            <div class="left">
+                <div class="content">
+                    <h2 style="color: #fa8fb1;">Sign Up</h2>
+                    <form method="post" action="/signup">
+                        <div>
+                            <input type="text" placeholder="fullname..." id="fullname" name="fullname"/>
+                            <br/>
+                            <input type="text" placeholder="email..." id="email" name="email" />
+
+                            <br />
+                            <input type="password" placeholder="password..." id="password" name="password"/>
+                            <br/>
+
+                            <select id="USER" name="USER">
+                                <option value="USER">USER</option>
+                                <option value="DOCTOR">DOCTOR</option>
+                              </select>
+
+                        </div>
+                    
+
+                    <button id="LeftToRight" class="on-off" style="color: #fa8fb1;" type="button">Login</button>
+                    <button style="background-color: #fa8fb1;">Register</button>
+                   
+                    <button type="submit" style="color: #fa8fb1;background-color: white;" type="button">Submit</button>
+                </form>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="content">
+                    <h2 style=" color: #fa8fb1;" >Login</h2>
+                    <form method="post" action="/signin">
+                        <div>
+                            <input type="text" placeholder="email..." name="email" />
+                            <br />
+                            <input type="password" placeholder="password..." name="password" />
+                        </div>
+                    
+                        <button id="RightToLeft" class="on-off" style="color: #fa8fb1;" type="button">Register</button>
+                        <button style="background-color: #fa8fb1;" type="button">Login</button>
+                        <button type="submit" style="color: #fa8fb1; background-color: white;">Submit</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <% if(locals.error){ %>
+            <div style="color: #3c763d;background-color: #dff0d8; border-color: #d6e9c6;padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;">
+                <a href="#" style=" text-decoration: none; float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; filter: alpha(opacity=20); opacity: .2;" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong> <%= locals.error %></strong> 
+            </div>
+               
+            <% } %>
+    </div>
+   
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#RightToLeft").on("click", function () {
+                $("#slide").animate({
+                    marginLeft: "0",
+                });
+                $(".top").animate({
+                    marginLeft: "100%",
+                });
+            });
+            $("#LeftToRight").on("click", function () {
+                $("#slide").animate({
+                    marginLeft: "50%",
+                });
+                $(".top").animate({
+                    marginLeft: "0",
+                });
+            });
+        });    </script>
+</body>
+
+</html>
